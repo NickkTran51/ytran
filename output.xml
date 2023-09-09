@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230908 11:16:37.063" rpa="false" schemaversion="3">
+<suite id="s1" name="Ytran" source="c:\Users\VBPO\Desktop\RPA\ytran.robot">
+<test id="s1-t1" name="Create Excel Files" line="46">
+<kw name="Get Current Date" library="DateTime">
+<var>${date_time_now}</var>
+<arg>result_format=%m-%d-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230908 11:16:46.703" level="INFO">${date_time_now} = 09-08-2023</msg>
+<status status="PASS" starttime="20230908 11:16:46.698" endtime="20230908 11:16:46.713"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${date_time_now}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230908 11:16:46.716" endtime="20230908 11:16:46.720"/>
+</kw>
+<kw name="Create Workbook" library="RPA.Excel.Files">
+<arg>${Excel_File_Path}${/}${date_time_now}.xlsx</arg>
+<doc>Create and open a new Excel workbook.</doc>
+<status status="PASS" starttime="20230908 11:16:46.723" endtime="20230908 11:16:46.737"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20230908 11:16:46.740" endtime="20230908 11:16:46.779"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20230908 11:16:46.782" endtime="20230908 11:16:46.803"/>
+</kw>
+<status status="PASS" starttime="20230908 11:16:46.692" endtime="20230908 11:16:46.808"/>
+</test>
+<doc>Insert the sales data for the week and export it as a PDF</doc>
+<status status="PASS" starttime="20230908 11:16:37.091" endtime="20230908 11:16:46.813"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ytran">Ytran</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230908 11:16:46.688" level="WARN">No input work items file found: None</msg>
+</errors>
+</robot>
